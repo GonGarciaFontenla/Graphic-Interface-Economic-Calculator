@@ -1,4 +1,3 @@
-// // Aquí puedes agregar la lógica para manejar los clics en los enlaces del menú y mostrar el contenido correspondiente.
 // Manejar los clics en otros enlaces del menú
 document.querySelectorAll('nav ul li a').forEach(link => {
     // Evitar agregar el manejador de la alerta al enlace de Fisher
@@ -10,7 +9,6 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     }
 });
 
-
 // Mostrar el formulario de Fisher cuando se hace clic en el enlace
 document.getElementById('menu-fisher').addEventListener('click', function(event) {
     event.preventDefault();
@@ -18,10 +16,11 @@ document.getElementById('menu-fisher').addEventListener('click', function(event)
     document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
     // Mostrar la sección de Fisher
     document.getElementById('fisher-section').classList.remove('hidden');
+    // Ocultar el menú de navegación
+    document.querySelector('nav').classList.add('hidden');
     // Opcional: Puedes enfocarte en el primer input si deseas
     document.getElementById('nominal-rate').focus();
 });
-
 
 // Calcular la tasa de interés real con la ecuación de Fisher
 document.getElementById('fisher-form').addEventListener('submit', function(event) {
