@@ -1,10 +1,15 @@
 // // Aquí puedes agregar la lógica para manejar los clics en los enlaces del menú y mostrar el contenido correspondiente.
-// document.querySelectorAll('nav ul li a').forEach(link => {
-//     link.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         alert('Esta funcionalidad se implementará próximamente.');
-//     });
-// });
+// Manejar los clics en otros enlaces del menú
+document.querySelectorAll('nav ul li a').forEach(link => {
+    // Evitar agregar el manejador de la alerta al enlace de Fisher
+    if (link.id !== 'menu-fisher') {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Esta funcionalidad se implementará próximamente.');
+        });
+    }
+});
+
 
 // Mostrar el formulario de Fisher cuando se hace clic en el enlace
 document.getElementById('menu-fisher').addEventListener('click', function(event) {
