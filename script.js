@@ -7,11 +7,17 @@ document.querySelectorAll('nav ul li a').forEach(link => {
 });
 
 // Mostrar el formulario de Fisher cuando se hace clic en el enlace
+// Mostrar el formulario de Fisher cuando se hace clic en el enlace
 document.getElementById('menu-fisher').addEventListener('click', function(event) {
     event.preventDefault();
+    // Ocultar todas las secciones primero
     document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+    // Mostrar la sección de Fisher
     document.getElementById('fisher-section').classList.remove('hidden');
+    // Opcional: Puedes enfocarte en el primer input si deseas
+    document.getElementById('nominal-rate').focus();
 });
+
 
 // Calcular la tasa de interés real con la ecuación de Fisher
 document.getElementById('fisher-form').addEventListener('submit', function(event) {
