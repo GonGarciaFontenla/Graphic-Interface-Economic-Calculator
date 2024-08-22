@@ -7,7 +7,6 @@ document.querySelectorAll('nav ul li a').forEach(link => {
 });
 
 // Mostrar el formulario de Fisher cuando se hace clic en el enlace
-// Mostrar el formulario de Fisher cuando se hace clic en el enlace
 document.getElementById('menu-fisher').addEventListener('click', function(event) {
     event.preventDefault();
     // Ocultar todas las secciones primero
